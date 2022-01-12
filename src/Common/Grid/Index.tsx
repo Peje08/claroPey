@@ -12,7 +12,7 @@ interface ContainerIterface {
     alignContent?: string
 }
 
-export const Container: FunctionComponent<ContainerIterface> = styled("div")<{
+export const Container: FunctionComponent<ContainerIterface> = styled("div") <{
     wrap?: string
     alignContent?: string
 }>`
@@ -22,9 +22,22 @@ export const Container: FunctionComponent<ContainerIterface> = styled("div")<{
     flex-direction: row;
     flex-wrap: ${props => (props.wrap ? "wrap" : "no-wrap")};
     align-content: ${props => props?.alignContent};
-    border: 1px solid red;
+    border: 2px solid #e4e4e4;
+    position: relative;
+    border-radius: 5px;
+    
+
+    &:before{ content: '';
+    top: 46px;
+    position: absolute;
+    border-bottom: 2px #e4e4e4 solid;
+    height: 10px;
+    width: 100%;
+    transform: translateY(-50%);
+    }
+    
 `
-export const Col: FunctionComponent<ColInterface> = styled("div")<{
+export const Col: FunctionComponent<ColInterface> = styled("div") <{
     size: number
     colSize?: number
     bgColor?: string
@@ -44,7 +57,7 @@ export const Label = styled.div`
   line-height: normal;
 `;
 
-export const Content = styled('div')<{
+export const Content = styled('div') <{
     color?: string;
 }>`
     height: 20px;
@@ -55,17 +68,34 @@ export const Content = styled('div')<{
     font-size: 15px;
     text-align: left;
     line-height: normal;
-    color: ${ props => props?.color ? props.color : "#5a5a5a"};
+    color: ${props => props?.color ? props.color : "#5a5a5a"};
 `;
 
-export const Element = styled.div`
+export const Element = styled('div') <{
+    line?: boolean
+}>`
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-`;
-export const Icon = styled.img`
-    height: 28px;
+    padding: 0.5rem;
+    border-right: ${props => props.line && "2px solid #e4e4e4"}
+    `;
+    
+
+export const Icon = styled('p') <{
+    color?:string
+    bgColor?: string
+}>`
+    font-size: 25px;
+    background: ${props => props?.bgColor};
+    color: ${props => props?.color};
     border-radius: 50%;
+    text-align: center;
+    
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    align-self: center;
+    
 `;
 export const State = styled.div`
     display: inline-block;

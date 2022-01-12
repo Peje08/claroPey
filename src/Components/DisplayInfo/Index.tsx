@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { Col, Container, Label, Content, Element, Icon, State } from "../../Common/Grid/Index"
+import styled from 'styled-components'
 
 // interface UserDisplayInterface {
 //     icon: string
@@ -23,40 +24,44 @@ import { Col, Container, Label, Content, Element, Icon, State } from "../../Comm
 //     megas: number
 //     reBuy: number
 // }
+
+
 interface DisplayUser {
     user: any[];
 };
 
 export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
-
+    
     return (
         <Container wrap={"wrap"}>
-                {user.map((
-                    { label, content, type, active, line, col }
+            {user.map((
+                { label, content, type, active, line, col }
                 ) =>
-                    <Col size={col}>
-                        <Element>
-                            {(() => {
-                                switch (type) {
+                <Col size={col}>
+                    
+                    <Element line={line}>
+                        {(() => {
+                            switch (type) {
                                 case "label":
-                                    return (    
+                                    return (
                                         <>
-                                        {line && <div></div>}
-                                        <Label>{label}</Label>
-                                        <Content color={active}>{content}</Content>
+                                            <Label>{label}</Label>
+                                            <Content color={active}>{content}</Content>
                                         </>);
-                                // Enviar prop a styled comp 
+
                                 case "icon":
-                                    return <Icon src={content} />;
+                                    return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i></Icon>;
                                 case "state":
                                     return <State>{content}</State>;
-                                }
-                            })()}
-                        </Element>
-                    </Col>
-                )}
+                                
+
+                            }
+                        })()}
+                    </Element>
+                </Col>
+            )}
         </Container>
+        
     )
 }
-
 
