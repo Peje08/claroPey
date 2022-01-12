@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { Col, Container, Label, Content, Element, Icon, State, HorizontalDivisor, VerticallDivisor } from "../../Common/Grid/Index"
+import { Col, Container, Label, Content, Element, Icon, State, HorizontalDivisor, VerticallDivisor, Badge } from "../../Common/Grid/Index"
 
 interface DisplayUser {
     user: any[];
@@ -12,7 +12,7 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
         <Container wrap={"wrap"}>
             <HorizontalDivisor />
             {user.map((
-                { label, content, type, active, line, col }
+                { label, content, type, active, line, col,color,bgColor }
                 ) =>
                 <Col size={col}>
 
@@ -27,13 +27,20 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
                                             {line && <VerticallDivisor />}
                                         </>);
                                 case "icon":
-                                    return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i></Icon>
-                                
+                                    return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i>Liliana</Icon>
+                                case "badge":
+                                    return <Badge color={color} bgColor={bgColor}><i className="bi bi-person-fill"></i>{content}</Badge>
                                 case "state":
                                     return <State>{content}</State>;
                             }
                         })()}
-
+  {/* {
+    type:"badge",
+    color: "#fff",
+    bgColor: "#fa7321",
+    userType: "BÁSICO",
+    col: 3
+  }, */}
                     </Element>
                 </Col>
             )}
