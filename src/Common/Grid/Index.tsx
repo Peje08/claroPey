@@ -27,16 +27,16 @@ export const Container: FunctionComponent<ContainerIterface> = styled("div") <{
     border-radius: 5px;
     
 
-    &:before{ content: '';
+    `
+    /*&:before{ content: '';
     top: 46px;
     position: absolute;
     border-bottom: 2px #e4e4e4 solid;
     height: 10px;
     width: 100%;
     transform: translateY(-50%);
-    }
+    }*/
     
-`
 export const Col: FunctionComponent<ColInterface> = styled("div") <{
     size: number
     colSize?: number
@@ -71,13 +71,11 @@ export const Content = styled('div') <{
     color: ${props => props?.color ? props.color : "#5a5a5a"};
 `;
 
-export const Element = styled('div') <{
-    line?: boolean
-}>`
+export const Element = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    border-right: ${props => props.line && "2px solid #e4e4e4"}
     `;
     
 
@@ -107,3 +105,23 @@ export const State = styled.div`
     font-weight: 550;
     font-family: "OpenSans-SemiBold", "Open Sans SemiBold", "Open Sans",sans-serif;
 `
+
+export const HorizontalDivisor = styled.div`
+position: absolute;
+width: 100%;
+border-bottom: 2px solid #e4e4e4;
+background-color: rgba(255, 255, 255, 0);
+box-sizing: border-box;
+top: 50%;
+`
+export const VerticallDivisor = styled.div`
+position: absolute;
+height: 55%;
+border-right: 2px solid #e4e4e4;
+background-color: rgba(255, 255, 255, 0);
+box-sizing: border-box;
+right: 0;
+top: 20%;
+`
+
+
