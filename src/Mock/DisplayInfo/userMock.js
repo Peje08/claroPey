@@ -1,9 +1,7 @@
-import userIcon from "../../Icons/person-circle.svg"
 
 export const userMock = [
   {
     type: "icon",
-    content: userIcon,
     color: "light-blue",
     col: 1
   },

@@ -5,6 +5,7 @@ interface DisplayUser {
     user: any[];
 };
 
+
 export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
 
     return (
@@ -17,7 +18,7 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
 
                     <Element>
                         {(() => {
-                            switch (type) {
+                            switch (type ) {
                                 case "label":
                                     return (
                                         <>
@@ -25,13 +26,11 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
                                             <Content color={active}>{content}</Content>
                                             {line && <VerticallDivisor />}
                                         </>);
-
                                 case "icon":
                                     return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i></Icon>
                                 
                                 case "state":
                                     return <State>{content}</State>;
-
                             }
                         })()}
 
