@@ -12,7 +12,7 @@ interface ContainerIterface {
     alignContent?: string
 }
 
-export const Container: FunctionComponent<ContainerIterface> = styled("div") <{
+const Container: FunctionComponent<ContainerIterface> = styled("div") <{
     wrap?: string
     alignContent?: string
 }>`
@@ -25,19 +25,9 @@ export const Container: FunctionComponent<ContainerIterface> = styled("div") <{
     border: 2px solid #e4e4e4;
     position: relative;
     border-radius: 5px;
-    
-
     `
-    /*&:before{ content: '';
-    top: 46px;
-    position: absolute;
-    border-bottom: 2px #e4e4e4 solid;
-    height: 10px;
-    width: 100%;
-    transform: translateY(-50%);
-    }*/
-    
-export const Col: FunctionComponent<ColInterface> = styled("div") <{
+
+const Col: FunctionComponent<ColInterface> = styled("div") <{
     size: number
     colSize?: number
     bgColor?: string
@@ -46,7 +36,7 @@ export const Col: FunctionComponent<ColInterface> = styled("div") <{
     width: ${props => props.size * (100 / (props?.colSize || 12))}%;
     background-color: ${props => props.bgColor};
 `
-export const Label = styled.div`
+const Label = styled.div`
   height: 14px;
   background-color: rgba(255, 255, 255, 0);
   box-sizing: border-box;
@@ -57,7 +47,7 @@ export const Label = styled.div`
   line-height: normal;
 `;
 
-export const Content = styled('div') <{
+const Content = styled('div') <{
     color?: string;
 }>`
     height: 20px;
@@ -71,16 +61,16 @@ export const Content = styled('div') <{
     color: ${props => props?.color ? props.color : "#5a5a5a"};
 `;
 
-export const Element = styled.div`
+const Element = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     `;
-    
 
-export const Icon = styled('p') <{
-    color?:string
+
+const Icon = styled('p') <{
+    color?: string
     bgColor?: string
 }>`
     font-size: 25px;
@@ -95,7 +85,7 @@ export const Icon = styled('p') <{
     align-self: center;
     
 `;
-export const State = styled.div`
+const State = styled.div`
     display: inline-block;
     background-color: #19b162;
     padding: .6rem 1.4rem;
@@ -106,7 +96,7 @@ export const State = styled.div`
     font-family: "OpenSans-SemiBold", "Open Sans SemiBold", "Open Sans",sans-serif;
 `
 
-export const HorizontalDivisor = styled.div`
+const HorizontalDivisor = styled.div`
 position: absolute;
 width: 100%;
 border-bottom: 2px solid #e4e4e4;
@@ -114,7 +104,7 @@ background-color: rgba(255, 255, 255, 0);
 box-sizing: border-box;
 top: 50%;
 `
-export const VerticallDivisor = styled.div`
+const VerticallDivisor = styled.div`
 position: absolute;
 height: 55%;
 border-right: 2px solid #e4e4e4;
@@ -125,3 +115,14 @@ top: 20%;
 `
 
 
+export {
+    Container,
+    Col,
+    Label,
+    Content,
+    Element,
+    Icon,
+    State,
+    HorizontalDivisor,
+    VerticallDivisor
+};
