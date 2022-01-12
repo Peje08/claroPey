@@ -53,8 +53,6 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
                                     return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i></Icon>;
                                 case "state":
                                     return <State>{content}</State>;
-                                
-
                             }
                         })()}
                     </Element>

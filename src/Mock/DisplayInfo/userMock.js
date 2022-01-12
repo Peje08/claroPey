@@ -10,9 +10,8 @@ export const userMock = [
   {
     type: "label",
     label: "Titular",
-    content: "LUCIANO JAVIER GUADAGNINI",
+    content: "Silvina Elizabeth Lopez Gonzalez",
     col: 3,
-    line: true
   },
   {
     type: "label",
@@ -23,105 +22,60 @@ export const userMock = [
   },
   {
     type: "label",
-    label: "N° de cliente",
-    content: 1064836326,
+    label: "Línea",
+    content: 8888776662,
     col: 1.5,
     line: true
   },
   {
     type: "label",
-    label: "N° de línea",
-    content: 1111148945,
+    label: "CUIT",
+    content: 20344561320,
     col: 1.5,
     line: true
   },
   {
     type: "label",
-    active: "#19b162",
-    label: "Estado",
-    content: "Activo",
+    label: "Género",
+    content: "F",
     col: 1
   },
   {
-    type: "state",
-    label: "Tipo de usuario",
-    content: "ULTRA HEAVY CR",
+    type: "label",
+    label: "Ocupación",
+    content: "Empleado",
     col: 2.5
   },
   
   {
     type: "label",
-    label: "Líneas activas",
-    content: 1,
+    label: "Dirección",
+    content: "Santiago de Estero 3454",
     col: 1
   },
   {
     type: "label",
-    label: "Líneas de cuenta",
-    content: 1,
+    label: "Código Postal",
+    content: "7689",
     col: 1.12
 
   },
   {
     type: "label",
-    label: "Negocio",
-    content: "CR",
+    label: "Ciudad",
+    content: "Bahía Blanca",
     col: .8
   },
   {
     type: "label",
-    label: "Ciclo",
-    content: 22,
+    label: "Provincia",
+    content: "Buenos Aires",
     col: .5
   },
   {
     type: "label",
-    label: "Segmento",
-    content: "Masivo",
+    label: "Correo Electrónico",
+    content: "example@gmail.com",
     col: .7
-  },
-  {
-    type: "label",
-    label: "Plan",
-    content: "ACI57 - Control América (Futuro)",
-    line: true,
-    col: 2.88
-  },
-  {
-    type: "label",
-    label: "Recargas",
-    content: "0000",
-    col: 0.7
-  },
-  {
-    type: "label",
-    label: "Voz ON",
-    content: "0000",
-    col: 0.7
-  },
-  {
-    type: "label",
-    label: "Voz OFF",
-    content: "0000",
-    col: 0.7
-  },
-  {
-    type: "label",
-    label: "SMS",
-    content: "0000",
-    col: 0.7
-  },
-  {
-    type: "label",
-    label: "Megas",
-    content: "0000",
-    col: 0.7
-  },
-  {
-    type: "label",
-    label: "Recompras",
-    content: "0000",
-    col: 0.7
-  },
-  
+  }
 ];
