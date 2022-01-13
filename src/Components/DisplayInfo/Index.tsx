@@ -27,20 +27,14 @@ export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
                                             {line && <VerticallDivisor />}
                                         </>);
                                 case "icon":
-                                    return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i>Liliana</Icon>
+                                    return <Icon color={'#ffffff'} bgColor={'#57b4e5'}><i className="bi bi-person-fill"></i></Icon>
                                 case "badge":
                                     return <Badge color={color} bgColor={bgColor}><i className="bi bi-person-fill"></i>{content}</Badge>
                                 case "state":
                                     return <State>{content}</State>;
                             }
                         })()}
-  {/* {
-    type:"badge",
-    color: "#fff",
-    bgColor: "#fa7321",
-    userType: "BÁSICO",
-    col: 3
-  }, */}
+  
                     </Element>
                 </Col>
             )}

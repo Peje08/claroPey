@@ -8,8 +8,9 @@ export const userMock = [
   {
     type: "label",
     label: "Titular",
-    content: "Silvina Elizabeth Lopez Gonzalez",
+    content: "LUCIANO JAVIER GUADAGNINI",
     col: 3,
+    line: true
   },
   {
     type: "label",
@@ -20,62 +21,106 @@ export const userMock = [
   },
   {
     type: "label",
-    label: "Línea",
-    content: 8888776662,
+    label: "N° de cliente",
+    content: 1064836326,
     col: 1.5,
     line: true
   },
   {
     type: "label",
-    label: "CUIT",
-    content: 20344561320,
+    label: "N° de línea",
+    content: 1111148945,
     col: 1.5,
     line: true
   },
   {
     type: "label",
-    label: "Género",
-    content: "F",
+    active: "#19b162",
+    label: "Estado",
+    content: "Activo",
     col: 1
   },
   {
-    type: "label",
-    label: "Ocupación",
-    content: "Empleado",
+    type: "state",
+    label: "Tipo de usuario",
+    content: "ULTRA HEAVY CR",
     col: 2.5
   },
   
   {
     type: "label",
-    label: "Dirección",
-    content: "Santiago de Estero 3454",
+    label: "Líneas activas",
+    content: 1,
     col: 1
   },
   {
     type: "label",
-    label: "Código Postal",
-    content: "7689",
+    label: "Líneas de cuenta",
+    content: 1,
     col: 1.12
 
   },
   {
     type: "label",
-    label: "Ciudad",
-    content: "Bahía Blanca",
+    label: "Negocio",
+    content: "CR",
     col: .8
   },
   {
     type: "label",
-    label: "Provincia",
-    content: "Buenos Aires",
+    label: "Ciclo",
+    content: 22,
     col: .5
   },
   {
     type: "label",
-    label: "Correo Electrónico",
-    content: "example@gmail.com",
+    label: "Segmento",
+    content: "Masivo",
     col: .7
-  }
+  },
+  {
+    type: "label",
+    label: "Plan",
+    content: "ACI57 - Control América (Futuro)",
+    line: true,
+    col: 2.88
+  },
+  {
+    type: "label",
+    label: "Recargas",
+    content: "0000",
+    col: 0.7
+  },
+  {
+    type: "label",
+    label: "Voz ON",
+    content: "0000",
+    col: 0.7
+  },
+  {
+    type: "label",
+    label: "Voz OFF",
+    content: "0000",
+    col: 0.7
+  },
+  {
+    type: "label",
+    label: "SMS",
+    content: "0000",
+    col: 0.7
+  },
+  {
+    type: "label",
+    label: "Megas",
+    content: "0000",
+    col: 0.7
+  },
+  {
+    type: "label",
+    label: "Recompras",
+    content: "0000",
+    col: 0.7
+  },
 ];
 
 export const userMockClaroPay = [

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useContext } from 'react'
 import {CONTEXT} from '../../context';
 import { DisplayInfo } from '../../Components/DisplayInfo/Index';
-import { userMockClaroPay } from '../../Mock/DisplayInfo/userMock';
+import { userMock, userMockClaroPay } from '../../Mock/DisplayInfo/userMock';
 
 
 
@@ -13,9 +13,11 @@ const Home:FunctionComponent = () => {
     } : any = useContext(CONTEXT);
     
     return (
-    
+            <>
+            <DisplayInfo user={userMock}  />
+            <br/>
             <DisplayInfo user={userMockClaroPay}  />
-        
+            </>
     )
 }
 
