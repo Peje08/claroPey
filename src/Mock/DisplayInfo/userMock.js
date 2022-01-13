@@ -1,5 +1,5 @@
 
-export const userMock = [
+const userMock = [
   {
     type: "icon",
     color: "light-blue",
@@ -123,7 +123,7 @@ export const userMock = [
   },
 ];
 
-export const userMockClaroPay = [
+const userMockClaroPay = [
   {
     type:"badge",
     color: "#fff",
@@ -209,3 +209,5 @@ export const userMockClaroPay = [
     col: 3
   }
 ];
+
+export {userMock, userMockClaroPay}

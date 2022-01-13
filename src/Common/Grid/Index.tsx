@@ -10,11 +10,11 @@ interface ColInterface {
 
 
 const Container = styled.div`
-    
     border: 2px solid #e4e4e4;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     width: 1080px;
     `
@@ -60,22 +60,6 @@ const Element = styled.div`
     position: relative;
     `;
 
-
-const Icon = styled('p') <{
-    color?: string
-    bgColor?: string
-}>`
-    align-self: center;
-    background: ${props => props?.bgColor};
-    border-radius: 50%;
-    color: ${props => props?.color};
-    font-size: 25px;
-    height: 30px;
-    margin: 0;
-    text-align: center;
-    width: 30px;
-    
-`;
 const State = styled.div`
     background-color: #19b162;
     border-radius: 4px;
@@ -106,44 +90,13 @@ const VerticallDivisor = styled.div`
     top: 20%;
 `
 
-const Badge = styled('p') <{
-    bgColor?: string
-    color?: string
-}>`
-    background: ${props => props?.bgColor};
-    color: ${props => props?.color};
-    border-radius: 5px;
-    font-family: "OpenSans-SemiBold", "Open Sans SemiBold", "Open Sans",sans-serif;
-    padding: 5px 12px 3px 3px;
-    font-size: .7rem;
-    margin:0;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    font-weight: 600;
-    text-align: center;
-
-    & i{
-        color:${props => props?.bgColor};
-        background: ${props => props?.color};
-        border-radius:50px;
-        font-size: 1rem;
-        height: 1.3rem;
-        width: 1.3rem;
-
-    }
-`;
-
-
 export {
     Container,
     Col,
     Label,
     Content,
     Element,
-    Icon,
     State,
     HorizontalDivisor,
     VerticallDivisor,
-    Badge,
 };
