@@ -9,7 +9,7 @@ interface DisplayUser {
 export const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
 
     return (
-        <Container wrap={"wrap"}>
+        <Container>
             <HorizontalDivisor />
             {user.map((
                 { label, content, type, active, line, col,color,bgColor }

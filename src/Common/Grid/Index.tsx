@@ -7,22 +7,14 @@ interface ColInterface {
     bgColor?: string
     width?: number
 }
-interface ContainerIterface {
-    wrap?: string
-    alignContent?: string
-}
 
-const Container: FunctionComponent<ContainerIterface> = styled("div") <{
-    wrap?: string
-    alignContent?: string
-}>`
-    align-content: ${props => props?.alignContent};
+
+const Container = styled.div`
+    
     border: 2px solid #e4e4e4;
     border-radius: 5px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    flex-wrap: ${props => (props.wrap ? "wrap" : "no-wrap")};
     position: relative;
     width: 1080px;
     `
